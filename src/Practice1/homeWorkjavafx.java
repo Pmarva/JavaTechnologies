@@ -23,13 +23,13 @@ public class homeWorkjavafx extends  Application{
     @Override
     public void start(Stage primaryStage) throws Exception {
         Group root = new Group();
-        Canvas canvas = new Canvas(200,18);
+        Canvas canvas = new Canvas(200,25);
         GraphicsContext gc = canvas.getGraphicsContext2D();
         gc.setFill(Color.BLACK);
-        gc.setFont(Font.font("Arial",20));
+        gc.setFont(Font.font("Arial",25));
         gc.setFontSmoothingType(FontSmoothingType.GRAY);
 
-        gc.fillText("marvin".toUpperCase(),10,15);
+        gc.fillText("marvin".toUpperCase(),10,18);
         WritableImage i = canvas.snapshot(null,null);
         PixelReader pr = i.getPixelReader();
 
@@ -38,13 +38,14 @@ public class homeWorkjavafx extends  Application{
                 Color c = pr.getColor(x,y);
 
                if(c.equals(Color.BLACK)){
-                   System.out.print("+");
+                   System.out.print("#");
                } else {
-                   System.out.print("|");
+                   System.out.print("-");
                }
             }
             System.out.println();
         }
+
         root.getChildren().addAll(canvas);
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
