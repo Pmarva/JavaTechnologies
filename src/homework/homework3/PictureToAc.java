@@ -34,7 +34,7 @@ public class PictureToAc extends Application {
                 double r = pr.getColor(x, y).getRed() * 255;
                 double g = pr.getColor(x, y).getGreen() * 255;
                 double b = pr.getColor(x, y).getBlue() * 255;
-                int alpha = (pr.getArgb(x, y) >> 24) & 0xff; // bit shifting for detecting alpha channel
+                int alpha = (pr.getArgb(x, y) >> 24) & 0xff; // bit shifting for detecting alpha channel, got from google that line
 
                 double l = (0.21 * r) + (0.72 * g) + (0.07 * (b));
 
