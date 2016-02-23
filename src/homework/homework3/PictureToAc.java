@@ -18,7 +18,7 @@ public class PictureToAc extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-    double height = 60.0; // iamge height, automatic aspect ratio..
+    double height = 60.0; // iamge height, automatic aspect ratio.. set 0 for original
     String imageLocation = "http://www.clipartbest.com/cliparts/MiL/r8a/MiLr8a4ia.png"; //image location URL, or file path in pc
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -50,7 +50,7 @@ public class PictureToAc extends Application {
 
         String asciiArt = sb.toString();
         System.out.println(asciiArt);
-        file.write(asciiArt);
+        file.write(asciiArt); //if you write original size to file and then use notepad++ and zoom all the way out(ctrl + scroll) then its quite cool,
         file.close();
     }
 
