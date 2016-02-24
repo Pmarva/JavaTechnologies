@@ -18,10 +18,13 @@ public class PictureToAc extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-    double height = 60.0; // iamge height, automatic aspect ratio.. set 0 for original
-    String imageLocation = "http://www.clipartbest.com/cliparts/MiL/r8a/MiLr8a4ia.png"; //image location URL, or file path in pc
+
     @Override
     public void start(Stage primaryStage) throws Exception {
+
+        double height = 800; // iamge height, automatic aspect ratio.. set 0 for original
+        String imageLocation = "http://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/12/2015/03/Canon-EF-100-400mm-f4.5-5.6L-IS-II-sample-image-1.jpg"; //image location URL, or file path in pc
+
         Image image = new Image(imageLocation, 0, height, true, false);
 
 
