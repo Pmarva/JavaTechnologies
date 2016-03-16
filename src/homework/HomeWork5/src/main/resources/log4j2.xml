@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/" configDebug="true">
+  <Appenders>
+    <Console name="CONSOLE" target="SYSTEM_OUT">
+      <PatternLayout pattern="%d{HH:mm} %logger{36} - %msg%n"/>
+    </Console>
+    <RollingFile name="FILE" fileName="logs/userAction.log" filePattern="logs-%i.log.gz">
+      <PatternLayout>
+        <Pattern>%d{ISO8601} %c{1.} %m%n</Pattern>
+      </PatternLayout>
+      <Policies>
+        <SizeBasedTriggeringPolicy size="250 MB"/>
+      </Policies>
+    </RollingFile>
+  </Appenders>
+  <Loggers>
+  	<logger name="org.hibernate" level="ERROR" additivity="false">
+  		<AppenderRef ref="CONSOLE"/>
+  	</logger>
+    <logger name="userActivity" level="DEBUG" additivity="false">
+        <AppenderRef ref="FILE"/>
+    </logger>
+    <Root level="WARN">
+      <AppenderRef ref="CONSOLE"/>
+    </Root>
+  </Loggers>
+</log4j:configuration>
