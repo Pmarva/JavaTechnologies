@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="wicket:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="wicket-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="wicket:war exploded" />
+    </root>
+  </artifact>
+</component>
